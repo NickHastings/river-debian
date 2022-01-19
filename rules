@@ -1,0 +1,13 @@
+#!/usr/bin/make -f
+TARGET=$(shell zig libc | sed -n -e 's%^crt_dir.*/%%p')
+%:
+	dh $@
+
+override_dh_auto_install:
+	zig libc > libc.txt
+	zig build -Dxwayland -Drelease-safe -Dtarget=$(TARGET) -Dcpu=baseline --libc libc.txt --prefix debian/river/usr install
+	install -pD -m 0664 -t debian/river/usr/share/wayland-sessions/  debian/river.desktop
+
+override_dh_auto_clean:
+	dh_auto_clean
+	\rm -rf zig-cache zig-out doc/*.1 libc.txt

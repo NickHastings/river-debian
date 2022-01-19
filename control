@@ -1,0 +1,25 @@
+Source: river
+Section: x11
+Priority: optional
+Maintainer: Nick Hastings <nicholaschastings@gmail.com>
+Build-Depends: debhelper-compat (= 12),
+               zig (>= 0.9.0),
+               libwayland-dev,
+               wayland-protocols,
+               libwlroots-dev (>= 0.15.0),
+               libxkbcommon-dev,
+               libevdev-dev,
+               libpixman-1-dev,
+               pkgconf,
+               scdoc
+Standards-Version: 4.5.0
+Homepage: https://github.com/riverwm/river
+
+Package: river
+Architecture: any
+Multi-Arch: foreign
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: Dynamic tiling Wayland compositor
+ This is the River dynamic tiling Wayland compositor which includes a
+ flexible runtime configuration. River is currently early in
+ development. Expect breaking changes and missing features.

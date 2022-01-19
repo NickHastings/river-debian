@@ -1,0 +1,11 @@
+river (0.1.2-1~bpo11+2) bullseye-backports; urgency=medium
+
+  * Update build flags
+
+ -- Nick Hastings <nicholaschastings@gmail.com>  Tue, 18 Jan 2022 10:35:40 +0900
+
+river (0.1.2-1~bpo11+1) bullseye-backports; urgency=low
+
+  * Initial release.
+
+ -- Nick Hastings <nicholaschastings@gmail.com>  Thu, 06 Jan 2022 13:53:52 +0900
