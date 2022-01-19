@@ -2,15 +2,15 @@ Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: river
 Upstream-Contact: Isaac Freund <mail@isaacfreund.com>
 Source: https://github.com/riverwm/river
-#
-# Please double check copyright with the licensecheck(1) command.
 
 Files:     *
-Copyright: 2020-2021 The River Developers
+Copyright: 2020-2021, The River Developers
 License: GPL-3.0+
 
 Files:     debian/*
-Copyright: 2022 Nick Hastings <nicholaschastings@gmail.com>
+Copyright: 2022, Nick Hastings <nicholaschastings@gmail.com>
+License: GPL-3.0+
+
 License: GPL-3.0+
  This package is free software; you can redistribute it and/or
  modify it under the terms of the GNU Lesser General Public
