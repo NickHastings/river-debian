@@ -5,7 +5,7 @@ Source: https://github.com/riverwm/river
 
 Files:     *
 Copyright: 2020-2021, The River Developers
-License: GPL-3.0+
+License: GPL-3.0
 
 Files:     protocol/river-*.xml
 Copyright: 2020-2021, The River Developers
@@ -21,9 +21,9 @@ License: ISC
 
 Files:     debian/*
 Copyright: 2022, Nick Hastings <nicholaschastings@gmail.com>
-License: GPL-3.0+
+License: GPL-3.0
 
-License: GPL-3.0+
+License: GPL-3.0
  This package is free software; you can redistribute it and/or
  modify it under the terms of the GNU Lesser General Public
  License as published by the Free Software Foundation; either
