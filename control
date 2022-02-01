@@ -12,7 +12,7 @@ Build-Depends: debhelper-compat (= 12),
                libpixman-1-dev,
                pkgconf,
                scdoc
-Standards-Version: 4.5.0
+Standards-Version: 4.6.0.1
 Homepage: https://github.com/riverwm/river
 
 Package: river
