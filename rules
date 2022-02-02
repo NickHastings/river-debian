@@ -9,6 +9,7 @@ override_dh_auto_install:
 	install -pD -m 0664 -t debian/river/usr/share/wayland-sessions/  contrib/river.desktop
 	install -pD -m 0644 -t debian/river/usr/share/doc/river/ README.md
 	install -pD -m 0775 -t debian/river/usr/share/doc/river/example/ example/init
+	mv debian/river/usr/share/zsh/site-functions debian/river/usr/share/zsh/vendor-completions
 
 override_dh_auto_clean:
 	dh_auto_clean
