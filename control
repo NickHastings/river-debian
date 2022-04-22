@@ -13,6 +13,8 @@ Build-Depends: debhelper-compat (= 12),
                pkgconf,
                scdoc
 Standards-Version: 4.6.0.1
+Vcs-Browser: https://github.com/NickHastings/river-debian
+Vcs-Git: https://github.com/NickHastings/river-debian.git
 Homepage: https://github.com/riverwm/river
 
 Package: river
