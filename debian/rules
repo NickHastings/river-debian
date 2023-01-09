@@ -1,12 +1,12 @@
 #!/usr/bin/make -f
-TARGET=$(shell zig libc | sed -n -e 's%^crt_dir.*/%%p')
+include /usr/share/dpkg/architecture.mk
 DEB_INST := debian/river
 %:
 	dh $@
 
 override_dh_auto_install:
 	zig libc > libc.txt
-	XDG_CACHE_HOME= zig build -Dxwayland -Drelease-safe -Dtarget=$(TARGET) -Dcpu=baseline --libc libc.txt --prefix $(DEB_INST)/usr install
+	XDG_CACHE_HOME= zig build -Dxwayland -Drelease-safe -Dtarget=$(DEB_HOST_MULTIARCH) -Dcpu=baseline --libc libc.txt --prefix $(DEB_INST)/usr install
 	install -pD -m 0664 -t $(DEB_INST)/usr/share/wayland-sessions/  contrib/river.desktop
 	install -pD -m 0644 -t $(DEB_INST)/usr/share/doc/river/ README.md
 	install -pD -m 0775 -t $(DEB_INST)/usr/share/doc/river/example/ example/init
