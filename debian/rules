@@ -4,8 +4,7 @@ DEB_INST := debian/river
 %:
 	dh $@
 
-override_dh_auto_install:
-	zig libc > libc.txt
+override_dh_auto_install: libc.txt
 	XDG_CACHE_HOME= DESTDIR=$(DEB_INST) zig build -Dxwayland -Dpie -Drelease-safe -Dtarget=$(DEB_HOST_MULTIARCH) -Dcpu=baseline --libc libc.txt --prefix /usr install
 	install -pD -m 0664 -t $(DEB_INST)/usr/share/wayland-sessions/  contrib/river.desktop
 	install -pD -m 0644 -t $(DEB_INST)/usr/share/doc/river/ README.md
@@ -17,3 +16,14 @@ override_dh_auto_install:
 override_dh_auto_clean:
 	dh_auto_clean
 	\rm -rf zig-cache zig-out doc/*.1 libc.txt
+
+.ONESHELL:
+libc.txt:
+	cat <<- EOF > $@
+	include_dir=/usr/include
+	sys_include_dir=/usr/include/$(DEB_HOST_MULTIARCH)
+	crt_dir=/usr/lib/$(DEB_HOST_MULTIARCH)
+	msvc_lib_dir=
+	kernel32_lib_dir=
+	gcc_dir=
+	EOF
