@@ -1,5 +1,5 @@
-river (0.2.2-1) UNRELEASED; urgency=medium
+river (0.2.3-1) UNRELEASED; urgency=medium
 
   * Initial packaging (Closes: #1006593).
 
- -- Nick Hastings <nicholaschastings@gmail.com>  Fri, 20 Jan 2023 10:34:35 +0900
+ -- Nick Hastings <nicholaschastings@gmail.com>  Tue, 24 Jan 2023 06:44:50 +0900
