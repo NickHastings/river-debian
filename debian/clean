@@ -1,0 +1,4 @@
+zig-cache/
+zig-out/
+doc/*.1
+libc.txt

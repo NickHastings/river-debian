@@ -13,10 +13,6 @@ override_dh_auto_install: libc.txt
 	install -pD -m 0644 -t $(DEB_INST)/usr/share/river-protocols/ protocol/river-status-unstable-v1.xml
 	mv $(DEB_INST)/usr/share/zsh/site-functions $(DEB_INST)/usr/share/zsh/vendor-completions
 
-override_dh_auto_clean:
-	dh_auto_clean
-	\rm -rf zig-cache zig-out doc/*.1 libc.txt
-
 .ONESHELL:
 libc.txt:
 	cat <<- EOF > $@
